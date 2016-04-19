@@ -28,15 +28,13 @@ function getGitHooksFolder() {
 function installHook(hookName) {
 	if (gitInited) {
 		var hook = path.resolve(hooksFolder, hookName);
-
-		var hookFile = path.relative(hooksFolder, './hooks/' + hookName);
+		var myHookFile = path.relative(hooksFolder, path.join(__dirname,'../hooks/' , hookName));
 		var hookExists = fs.existsSync(hook);
-
 		if (hookExists) {
 			uninstallHook(hookName);
 		}
 		try {
-			fs.symlinkSync(hookFile, hook);
+			fs.symlinkSync(myHookFile, hook);
 			console.log('Install hook at ' + hook);
 		} catch (e) {
 			throw e;
