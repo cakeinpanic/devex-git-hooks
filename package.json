@@ -1,0 +1,14 @@
+{
+  "name": "devex-git-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./index.js",
+  "author": "Devexperts <web-frontend@devexperts.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
+}
